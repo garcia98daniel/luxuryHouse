@@ -11,6 +11,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 export default function LuxuryRemodelingFunnel() {
   const { t, language } = useLanguageContext();
   const WHATSAPP_URL = `https://wa.me/573006674009?text=${t.hero.whatsappText}`;
+  const [showVideoModal, setShowVideoModal] = React.useState(false);
 
   const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -34,7 +35,18 @@ export default function LuxuryRemodelingFunnel() {
       </a>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,161,91,0.28),transparent_38%),linear-gradient(120deg,rgba(0,0,0,.2),rgba(0,0,0,.86))]" />
-        <div className="absolute right-0 top-0 h-full w-1/2 bg-[linear-gradient(90deg,rgba(9,8,6,.4),rgba(9,8,6,.24)),url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-90" />
+        <div className="absolute right-0 top-0 h-full w-1/2">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover"
+          >
+            <source src="/assets/video/videoHero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,8,6,.4),rgba(9,8,6,.24))]" />
+        </div>
         <div className="relative mx-auto grid min-h-screen max-w-7xl items-center px-6 py-10 lg:grid-cols-[1.05fr_.95fr] lg:px-10">
           <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.12 }} className="max-w-3xl">
             <motion.div variants={fadeUp} className="mb-8 inline-flex items-center gap-3 rounded-full border border-[#c6a15b]/30 bg-white/5 px-4 py-2 text-sm text-[#dfc894] backdrop-blur">
@@ -91,10 +103,10 @@ export default function LuxuryRemodelingFunnel() {
         </div>
       </section>
 
-      <section id="portafolio" className="bg-[#e8dfd2] px-6 py-24 text-[#16120c] lg:px-10">
+      <section className="bg-[#e8dfd2] px-6 py-24 text-[#16120c] lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
+            <div  id="portafolio">
               <p className="text-sm uppercase tracking-[0.35em] text-[#8d6b2f]">{t.portfolio.badge}</p>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.04em] md:text-6xl">{t.portfolio.title}</h2>
             </div>
@@ -106,8 +118,32 @@ export default function LuxuryRemodelingFunnel() {
               className="lg:col-span-2"
             />
             <div className="grid gap-6">
-              <div className="min-h-[247px] rounded-[2rem] bg-[url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center p-6 shadow-2xl" />
-              <div className="min-h-[247px] rounded-[2rem] bg-[url('https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center p-6 shadow-2xl" />
+              <div className="min-h-[247px] rounded-[2rem] bg-[url('/assets/imgs/workers.jpeg')] bg-cover bg-center p-6 shadow-2xl" />
+              <div 
+                className="group relative min-h-[247px] rounded-[2rem] overflow-hidden shadow-2xl cursor-pointer"
+                onClick={() => setShowVideoModal(true)}
+              >
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-[247px] w-full object-cover"
+                >
+                  <source src="/assets/video/netflix.mp4" type="video/mp4" />
+                </video>
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <div className="mb-2">
+                      <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p className="text-sm font-medium">Ver en pantalla completa</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -190,6 +226,41 @@ export default function LuxuryRemodelingFunnel() {
         <Image src="/assets/imgs/wp.png" alt="WhatsApp" width={30} height={30} className="md:w-12 md:h-12" />
         <p className="font-bold">{t.whatsapp}</p>
       </a>
+      
+      {/* Video Modal */}
+      {showVideoModal && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setShowVideoModal(false)}
+        >
+          <div 
+            className="relative max-w-4xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowVideoModal(false)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label="Close video"
+            >
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            </button>
+            
+            {/* Video */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            >
+              <source src="/assets/video/netflix.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

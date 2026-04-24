@@ -68,7 +68,7 @@ export const translations = {
     // Process steps
     steps: [
       {
-        title: "Diagnóstico del hogar",
+        title: "Agenda una cita",
         text: "Conocemos tu espacio, estilo de vida, presupuesto y cómo quieres sentirte en cada habitación.",
       },
       {
