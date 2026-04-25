@@ -4,7 +4,7 @@ export const translations = {
   es: {
     // Hero section
     hero: {
-      badge: "Diseño interior de excelente calidad",
+      badge: "Diseño interior de excelente calidad - Apacionados por la madera",
       title: "Convierte cada espacio de tu casa en un lugar funcional y hermoso.",
       subtitle: "Diseñamos y ejecutamos remodelaciones elegantes, funcionales y memorables para propietarios que buscan acabados de calidad, orden en obra y un trabajo impecable.",
       ctaPrimary: "Agenda una cita",
@@ -39,30 +39,50 @@ export const translations = {
       description: "Cada proyecto se piensa para transformar tu hogar: luz, materiales, proporción, circulación y detalles que hacen la diferencia.",
       carousel: [
         {
-          url: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1200&auto=format&fit=crop",
-          category: "Sala de estar",
+          url: "/assets/imgs/img2.jpeg",
+          category: "Centro de entretenimiento",
+          title: "Funcional y con estilo"
+        },
+        {
+          url: "/assets/imgs/img1.jpeg",
+          category: "Centro de entretenimiento",
           title: "Diseño cálido y contemporáneo"
         },
         {
-          url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
-          category: "Cocina moderna",
-          title: "Funcionalidad y estilo"
+          url: "/assets/imgs/img3.jpeg",
+          category: "Render de lujo",
+          title: "Editable 100% a su gusto"
         },
         {
-          url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-          category: "Baño de lujo",
-          title: "Elegancia y confort"
-        },
-        {
-          url: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
+          url: "/assets/imgs/img4.jpeg",
           category: "Dormitorio principal",
-          title: "Espacio para descansar"
+          title: "Espacio para descansar minimalista"
         },
         {
-          url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
-          category: "Comedor familiar",
-          title: "Momentos compartidos"
-        }
+          url: "/assets/imgs/img5.jpeg",
+          category: "Centro de entretenimiento",
+          title: "Para compartir momentos"
+        },
+        {
+          url: "/assets/imgs/img6.jpeg",
+          category: "Baños completos",
+          title: "Optimizamos los espacios"
+        },
+        {
+          url: "/assets/imgs/img7.jpeg",
+          category: "Duchas",
+          title: "Griferia y accesorios modernos"
+        },
+        {
+          url: "/assets/imgs/img8.jpeg",
+          category: "Cocina",
+          title: "Diseñada a tu gusto"
+        },
+        {
+          url: "/assets/imgs/img9.jpeg",
+          category: "Cocina",
+          title: "Estilo exótico"
+        },
       ]
     },
     // Process steps
@@ -94,10 +114,10 @@ export const translations = {
     team: {
       title: "Nuestro Equipo",
       members: [
-        { name: "Ing Camilo Garcia", role: "Consultor Comercial" },
-        { name: "Ing Miguel Machado", role: "Gerente de Operaciones" },
-        { name: "Ing Daniel Garcia", role: "Estratega digital" },
-        { name: "Ing Jose Rangel", role: "Coordinador Administrativo y Financiero" }
+        { profession:'Ing Sistemas', name: "Camilo Garcia", role: "Consultor Comercial", image: "camilo.png", instagram: "camilogar21" },
+        { profession:'Ing Civil', name: "Miguel Machado", role: "Gerente de Operaciones", image: "migue.png", instagram: "miguel_machado_13" },
+        { profession:'Ing Civil', name: "Jose Rangel", role: "Coordinador Administrativo y Financiero", image: "jose.png", instagram: "jose.rangel94" },
+        { profession:'Ing Sistemas', name: "Daniel Garcia", role: "Estratega digital", image: "daniel.png", instagram: "daniel98garcia" }
       ]
     },
     // CTA section
@@ -105,10 +125,10 @@ export const translations = {
       badge: "Agenda una asesoría",
       title: "Crea tu espacio de ensueño con nosotros.",
       description: "Cuéntanos qué zona de tu casa quieres transformar y recibe una orientación inicial para definir alcance, estilo y presupuesto estimado.",
-      button: "Cotizar por WhatsApp"
+      button: "Cotiza sin compromiso"
     },
     // Footer
-    footer: "Remodelaciones de calidad · Diseño interior · Acabados de excelencia · Santa Marta . Barranquilla . Cartagena",
+    footer: "Remodelaciones de calidad · Diseño de interiores · Acabados de excelencia · Santa Marta . Barranquilla . Cartagena",
     // WhatsApp button
     whatsapp: "Cotizar",
     // SEO
@@ -128,7 +148,7 @@ export const translations = {
   en: {
     // Hero section
     hero: {
-      badge: "Excellent quality interior design",
+      badge: "Excellent quality interior design - Passionate about wood",
       title: "Transform every space in your home into a functional and beautiful place.",
       subtitle: "We design and execute elegant, functional, and memorable remodels for homeowners seeking quality finishes, organized construction, and impeccable work.",
       ctaPrimary: "Request space diagnosis",
@@ -163,29 +183,49 @@ export const translations = {
       description: "Each project is designed to transform your home: light, materials, proportions, circulation, and details that make the difference.",
       carousel: [
         {
-          url: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1200&auto=format&fit=crop",
-          category: "Living Room",
+          url: "/assets/imgs/img2.jpeg",
+          category: "Entertainment Center",
+          title: "Functional and with style"
+        },
+        {
+          url: "/assets/imgs/img1.jpeg",
+          category: "Entertainment Center",
           title: "Warm and contemporary design"
         },
         {
-          url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
-          category: "Modern Kitchen",
-          title: "Functionality and style"
+          url: "/assets/imgs/img3.jpeg",
+          category: "Luxury Render",
+          title: "100% editable to your taste"
         },
         {
-          url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-          category: "Luxury Bathroom",
-          title: "Elegance and comfort"
-        },
-        {
-          url: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
+          url: "/assets/imgs/img4.jpeg",
           category: "Master Bedroom",
-          title: "Space to rest"
+          title: "Minimalist resting space"
         },
         {
-          url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
-          category: "Family Dining",
-          title: "Shared moments"
+          url: "/assets/imgs/img5.jpeg",
+          category: "Entertainment Center",
+          title: "To share moments"
+        },
+        {
+          url: "/assets/imgs/img6.jpeg",
+          category: "Complete Bathrooms",
+          title: "We optimize spaces"
+        },
+        {
+          url: "/assets/imgs/img7.jpeg",
+          category: "Showers",
+          title: "Modern faucetry and accessories"
+        },
+        {
+          url: "/assets/imgs/img8.jpeg",
+          category: "Kitchen",
+          title: "Designed to your taste"
+        },
+        {
+          url: "/assets/imgs/img9.jpeg",
+          category: "Kitchen",
+          title: "Exotic style"
         }
       ]
     },
@@ -218,10 +258,10 @@ export const translations = {
     team: {
       title: "Our Team",
       members: [
-        { name: "Eng. Camilo Garcia", role: "Commercial Consultant" },
-        { name: "Eng. Miguel Machado", role: "Operations Manager" },
-        { name: "Eng. Daniel Garcia", role: "Digital Strategist" },
-        { name: "Eng. Jose Rangel", role: "Administrative and Financial Coordinator" }
+        { profession: 'Systems Engineer', name: "Camilo Garcia", role: "Commercial Consultant", image: "camilo.png", instagram: "camilogar21" },
+        { profession: 'Civil Engineer', name: "Miguel Machado", role: "Operations Manager", image: "migue.png", instagram: "miguel_machado_13" },
+        { profession: 'Civil Engineer', name: "Jose Rangel", role: "Administrative and Financial Coordinator", image: "jose.png", instagram: "jose.rangel94" },
+        { profession: 'Systems Engineer', name: "Daniel Garcia", role: "Digital Strategist", image: "daniel.png", instagram: "daniel98garcia" }
       ]
     },
     // CTA section
@@ -232,7 +272,7 @@ export const translations = {
       button: "Quote via WhatsApp"
     },
     // Footer
-    footer: "Quality Remodels · Interior Design · Excellence Finishes · Santa Marta . Barranquilla . Cartagena",
+    footer: "Quality remodeling · Interior design · Excellence finishes · Santa Marta . Barranquilla . Cartagena",
     // WhatsApp button
     whatsapp: "Quote with us",
     // SEO

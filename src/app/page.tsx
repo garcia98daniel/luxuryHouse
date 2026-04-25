@@ -12,6 +12,7 @@ export default function LuxuryRemodelingFunnel() {
   const { t, language } = useLanguageContext();
   const WHATSAPP_URL = `https://wa.me/573006674009?text=${t.hero.whatsappText}`;
   const [showVideoModal, setShowVideoModal] = React.useState(false);
+  const [videoClicked, setVideoClicked] = React.useState(false);
 
   const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -19,20 +20,30 @@ export default function LuxuryRemodelingFunnel() {
   };
   return (
     <main className="min-h-screen bg-[#090806] text-[#f7efe3] selection:bg-[#c6a15b] selection:text-black">
-      <a 
-        href="https://www.instagram.com/luxuryhousecolombia_/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="hidden fixed top-6 right-6 z-40 md:top-8 md:right-8 rounded-full overflow-hidden shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#c6a15b]/20 group md:block"
-      >
-        <Image 
-          src="/assets/imgs/logo.png" 
-          alt="Luxury Remodeling Logo" 
-          width={150} 
-          height={150} 
-          className="object-contain transition-transform duration-300 group-hover:rotate-6"
-        />
-      </a>
+      <div className="hidden fixed top-6 right-6 z-40 md:top-8 md:right-8 md:block">
+        <div 
+          className="relative group cursor-pointer transition-all duration-300 hover:scale-110"
+          onClick={() => window.open('https://www.instagram.com/luxuryhousecolombia_/', '_blank', 'noopener,noreferrer')}
+        >
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            <p className="text-[#c6a15b] text-sm font-medium flex items-center gap-1 bg-black/80 px-3 py-1 rounded-full">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+              </svg>
+              @luxuryhousecolombia_
+            </p>
+          </div>
+          <div className="rounded-full overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-[#c6a15b]/20 transition-all duration-300">
+            <Image 
+              src="/assets/imgs/logo.png" 
+              alt="Luxury Remodeling Logo" 
+              width={150} 
+              height={150} 
+              className="object-contain transition-transform duration-300 group-hover:rotate-6"
+            />
+          </div>
+        </div>
+      </div>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,161,91,0.28),transparent_38%),linear-gradient(120deg,rgba(0,0,0,.2),rgba(0,0,0,.86))]" />
         <div className="absolute right-0 top-0 h-full w-1/2">
@@ -45,7 +56,6 @@ export default function LuxuryRemodelingFunnel() {
           >
             <source src="/assets/video/videoHero.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,8,6,.4),rgba(9,8,6,.24))]" />
         </div>
         <div className="relative mx-auto grid min-h-screen max-w-7xl items-center px-6 py-10 lg:grid-cols-[1.05fr_.95fr] lg:px-10">
           <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.12 }} className="max-w-3xl">
@@ -55,7 +65,7 @@ export default function LuxuryRemodelingFunnel() {
             <motion.h1 variants={fadeUp} className="text-5xl font-semibold tracking-[-0.05em] text-balance md:text-6xl lg:text-7xl">
               {t.hero.title}
             </motion.h1>
-            <motion.p variants={fadeUp} className="mt-8 max-w-2xl text-lg leading-8 text-[#d8cdbd] md:text-xl">
+            <motion.p variants={fadeUp} className="mt-8 pr-12 max-w-2xl text-lg leading-8 text-[#d8cdbd] md:text-xl">
               {t.hero.subtitle}
             </motion.p>
             <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -110,7 +120,7 @@ export default function LuxuryRemodelingFunnel() {
               <p className="text-sm uppercase tracking-[0.35em] text-[#8d6b2f]">{t.portfolio.badge}</p>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.04em] md:text-6xl">{t.portfolio.title}</h2>
             </div>
-            <p className="max-w-sm text-lg leading-8 text-black/60">{t.portfolio.description}</p>
+            <p className="max-w-sm text-lg leading-8 text-black/80">{t.portfolio.description}</p>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             <ImageCarousel 
@@ -121,7 +131,10 @@ export default function LuxuryRemodelingFunnel() {
               <div className="min-h-[247px] rounded-[2rem] bg-[url('/assets/imgs/workers.jpeg')] bg-cover bg-center p-6 shadow-2xl" />
               <div 
                 className="group relative min-h-[247px] rounded-[2rem] overflow-hidden shadow-2xl cursor-pointer"
-                onClick={() => setShowVideoModal(true)}
+                onClick={() => {
+                  setShowVideoModal(true);
+                  setVideoClicked(true);
+                }}
               >
                 <video
                   autoPlay
@@ -133,14 +146,18 @@ export default function LuxuryRemodelingFunnel() {
                   <source src="/assets/video/netflix.mp4" type="video/mp4" />
                 </video>
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                <div className={`absolute inset-0 bg-black/70 transition-opacity duration-300 flex items-center justify-center ${
+                  videoClicked 
+                    ? 'opacity-0' 
+                    : 'opacity-100 group-hover:opacity-0'
+                }`}>
                   <div className="text-center text-white">
                     <div className="mb-2">
                       <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
-                    <p className="text-sm font-medium">Ver en pantalla completa</p>
+                    <p className="text-sm font-medium">{language === 'es' ? 'Ver en pantalla completa' : 'View full screen'}</p>
                   </div>
                 </div>
               </div>
@@ -187,12 +204,33 @@ export default function LuxuryRemodelingFunnel() {
           <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-6xl text-black mb-16">{t.team.title}</h2>
           <div className="grid gap-8 md:grid-cols-4">
             {t.team.members.map((member, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="w-32 h-32 rounded-full bg-[#c6a15b]/20 flex items-center justify-center mb-4">
-                  <span className="text-4xl text-[#c6a15b]">👨‍💼</span>
+              <div 
+                key={index} 
+                className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105"
+                onClick={() => window.open(`https://www.instagram.com/${member.instagram}`, '_blank', 'noopener,noreferrer')}
+              >
+                <div className="w-50 h-70 rounded-full bg-[#c6a15b]/20 flex items-center justify-center mb-4 overflow-hidden">
+                  <Image 
+                    src={`/assets/imgs/${member.image}`} 
+                    alt={member.name} 
+                    width={188} 
+                    height={188} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-2">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-black mb-0">{member.name}</h3>
+                <b className="text-[12px] font-semibold text-black mt-[-5px]">{member.profession}</b>
                 <p className="text-black text-sm">{member.role}</p>
+                
+                {/* Instagram handle - appears on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                  <p className="text-[#c6a15b] text-sm font-medium flex items-center gap-1">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                    @{member.instagram}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

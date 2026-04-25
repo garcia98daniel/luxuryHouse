@@ -56,7 +56,7 @@ export default function ImageCarousel({ images, className = "" }: ImageCarouselP
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="min-h-[520px] bg-cover bg-center"
           style={{ backgroundImage: `url('${currentImage.url}')` }}
         >
@@ -77,17 +77,17 @@ export default function ImageCarousel({ images, className = "" }: ImageCarouselP
       {/* Navigation Buttons */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur-md transition hover:bg-white/30 opacity-0 group-hover:opacity-100"
+        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/30 p-4 text-white backdrop-blur-md transition hover:bg-white/40 shadow-lg cursor-pointer"
         aria-label="Previous image"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={32} />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur-md transition hover:bg-white/30 opacity-0 group-hover:opacity-100"
+        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/30 p-4 text-white backdrop-blur-md transition hover:bg-white/40 shadow-lg cursor-pointer"
         aria-label="Next image"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={32} />
       </button>
 
       {/* Dots Indicator */}
