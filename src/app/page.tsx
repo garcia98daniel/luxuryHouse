@@ -10,7 +10,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 
 export default function LuxuryRemodelingFunnel() {
   const { t, language } = useLanguageContext();
-  const WHATSAPP_URL = `https://wa.me/573006674009?text=${t.hero.whatsappText}`;
+  const WHATSAPP_URL = `https://wa.me/573233534319?text=${t.hero.whatsappText}`;
   const [showVideoModal, setShowVideoModal] = React.useState(false);
   const [videoClicked, setVideoClicked] = React.useState(false);
 
