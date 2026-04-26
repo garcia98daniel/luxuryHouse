@@ -176,6 +176,16 @@ export default function LuxuryRemodelingFunnel() {
             </div>
           ))}
         </div>
+        
+        {/* CTA Button */}
+        <div className="mt-12 text-center">
+          <a 
+            href={WHATSAPP_URL} 
+            className="inline-flex items-center justify-center gap-3 rounded-full bg-[#c6a15b] px-8 py-5 text-lg font-semibold text-black shadow-2xl shadow-[#c6a15b]/20 transition hover:scale-[1.02] hover:bg-[#e1c176]"
+          >
+            {t.stepsCTA.button} <ArrowRight className="transition group-hover:translate-x-1" size={19} />
+          </a>
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10">

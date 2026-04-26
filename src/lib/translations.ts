@@ -100,6 +100,9 @@ export const translations = {
         text: "Coordinamos obra, acabados, proveedores y detalles para una entrega impecable.",
       },
     ],
+    stepsCTA: {
+      button: "Agenda una cita"
+    },
     // Quality section
     quality: {
       title: "Una remodelación de calidad debe sentirse segura desde el primer contacto.",
@@ -244,6 +247,9 @@ export const translations = {
         text: "We coordinate construction, finishes, suppliers, and details for an impeccable delivery.",
       },
     ],
+    stepsCTA: {
+      button: "Schedule a consultation"
+    },
     // Quality section
     quality: {
       title: "A quality remodel should feel secure from the first contact.",
