@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/assets/imgs/logo.png",
+  },
   title:
     "Remodelación de lujo en Santa Marta y Barranquilla | Diseño interior premium en Valledupar",
 
