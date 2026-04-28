@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, Gem, Hammer, Home, ShieldCheck, Sparkles, Star, Ruler, PhoneCall, MessageCircle } from "lucide-react";
 import { useLanguageContext } from "@/contexts/LanguageContext";
 import ImageCarousel from "@/components/ImageCarousel";
+import { trackMetaPixelEvent } from "@/lib/metaPixel";
 
 
 export default function LuxuryRemodelingFunnel() {
@@ -20,26 +21,27 @@ export default function LuxuryRemodelingFunnel() {
   };
   return (
     <main className="min-h-screen bg-[#090806] text-[#f7efe3] selection:bg-[#c6a15b] selection:text-black">
-      <div className="hidden fixed top-6 right-6 z-40 md:top-8 md:right-8 md:block">
+      <div className="fixed top-4 right-4 z-40 md:top-6 md:right-6">
         <div 
           className="relative group cursor-pointer transition-all duration-300 hover:scale-110"
           onClick={() => window.open('https://www.instagram.com/luxuryhousecolombia_/', '_blank', 'noopener,noreferrer')}
         >
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            <p className="text-[#c6a15b] text-sm font-medium flex items-center gap-1 bg-black/80 px-3 py-1 rounded-full">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            <p className="text-[#c6a15b] text-xs font-medium flex items-center gap-1 bg-black/80 px-2 py-1 rounded-full md:text-sm md:px-3">
+              <svg className="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
               </svg>
-              @luxuryhousecolombia_
+              <span className="hidden md:inline">@luxuryhousecolombia_</span>
+              <span className="md:hidden">IG</span>
             </p>
           </div>
-          <div className="rounded-full overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-[#c6a15b]/20 transition-all duration-300">
+          <div className="rounded-full overflow-hidden shadow-lg md:shadow-xl group-hover:shadow-2xl group-hover:shadow-[#c6a15b]/20 transition-all duration-300">
             <Image 
               src="/assets/imgs/logo.png" 
               alt="Luxury Remodeling Logo" 
-              width={150} 
-              height={150} 
-              className="object-contain transition-transform duration-300 group-hover:rotate-6"
+              width={100} 
+              height={100} 
+              className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] object-contain transition-transform duration-300 group-hover:rotate-6"
             />
           </div>
         </div>
@@ -69,10 +71,30 @@ export default function LuxuryRemodelingFunnel() {
               {t.hero.subtitle}
             </motion.p>
             <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href={WHATSAPP_URL} className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#c6a15b] px-7 py-4 font-semibold text-black shadow-2xl shadow-[#c6a15b]/20 transition hover:scale-[1.02] hover:bg-[#e1c176]">
+              <a 
+                href={WHATSAPP_URL} 
+                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#c6a15b] px-7 py-4 font-semibold text-black shadow-2xl shadow-[#c6a15b]/20 transition hover:scale-[1.02] hover:bg-[#e1c176]"
+                onClick={() => {
+                  trackMetaPixelEvent('Lead', {
+                    content_name: 'Hero WhatsApp CTA',
+                    source: 'landing_luxury_house',
+                    position: 'hero_section'
+                  });
+                }}
+              >
                 {t.hero.ctaPrimary} <ArrowRight className="transition group-hover:translate-x-1" size={19} />
               </a>
-              <a href="#portafolio" className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-semibold text-white/90 backdrop-blur transition hover:border-[#c6a15b]/70 hover:bg-white/5">
+              <a 
+                href="#portafolio" 
+                className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-semibold text-white/90 backdrop-blur transition hover:border-[#c6a15b]/70 hover:bg-white/5"
+                onClick={() => {
+                  trackMetaPixelEvent('ViewContent', {
+                    content_name: 'Portfolio CTA',
+                    source: 'landing_luxury_house',
+                    position: 'hero_section'
+                  });
+                }}
+              >
                 {t.hero.ctaSecondary}
               </a>
             </motion.div>
@@ -134,6 +156,11 @@ export default function LuxuryRemodelingFunnel() {
                 onClick={() => {
                   setShowVideoModal(true);
                   setVideoClicked(true);
+                  trackMetaPixelEvent('ViewVideo', {
+                    content_name: 'Portfolio Video',
+                    source: 'landing_luxury_house',
+                    position: 'portfolio_section'
+                  });
                 }}
               >
                 <video
@@ -182,6 +209,13 @@ export default function LuxuryRemodelingFunnel() {
           <a 
             href={WHATSAPP_URL} 
             className="inline-flex items-center justify-center gap-3 rounded-full bg-[#c6a15b] px-8 py-5 text-lg font-semibold text-black shadow-2xl shadow-[#c6a15b]/20 transition hover:scale-[1.02] hover:bg-[#e1c176]"
+            onClick={() => {
+              trackMetaPixelEvent('Lead', {
+                content_name: 'Steps WhatsApp CTA',
+                source: 'landing_luxury_house',
+                position: 'steps_section'
+              });
+            }}
           >
             {t.stepsCTA.button} <ArrowRight className="transition group-hover:translate-x-1" size={19} />
           </a>
@@ -217,7 +251,15 @@ export default function LuxuryRemodelingFunnel() {
               <div 
                 key={index} 
                 className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105"
-                onClick={() => window.open(`https://www.instagram.com/${member.instagram}`, '_blank', 'noopener,noreferrer')}
+                onClick={() => {
+                  window.open(`https://www.instagram.com/${member.instagram}`, '_blank', 'noopener,noreferrer');
+                  trackMetaPixelEvent('Engagement', {
+                    content_name: `Team Member: ${member.name}`,
+                    source: 'landing_luxury_house',
+                    position: 'team_section',
+                    instagram_handle: member.instagram
+                  });
+                }}
               >
                 <div className="w-50 h-70 rounded-full bg-[#c6a15b]/20 flex items-center justify-center mb-4 overflow-hidden">
                   <Image 
@@ -253,7 +295,17 @@ export default function LuxuryRemodelingFunnel() {
           <p className="text-sm uppercase tracking-[0.35em] text-[#c6a15b]">{t.cta.badge}</p>
           <h2 className="mt-5 text-5xl font-semibold tracking-[-0.05em] md:text-7xl">{t.cta.title}</h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/60">{t.cta.description}</p>
-          <a href={WHATSAPP_URL} className="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-[#c6a15b] px-8 py-5 text-lg font-semibold text-black shadow-2xl shadow-[#c6a15b]/20 transition hover:scale-[1.02] hover:bg-[#e1c176]">
+          <a 
+            href={WHATSAPP_URL} 
+            className="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-[#c6a15b] px-8 py-5 text-lg font-semibold text-black shadow-2xl shadow-[#c6a15b]/20 transition hover:scale-[1.02] hover:bg-[#e1c176]"
+            onClick={() => {
+              trackMetaPixelEvent('Lead', {
+                content_name: 'Final CTA WhatsApp',
+                source: 'landing_luxury_house',
+                position: 'final_cta_section'
+              });
+            }}
+          >
             <PhoneCall size={20} /> {t.cta.button}
           </a>
         </div>
@@ -270,6 +322,13 @@ export default function LuxuryRemodelingFunnel() {
         rel="noopener noreferrer"
         className="p-3 fixed bottom-6 right-6 z-50 flex h-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all hover:bg-green-600 hover:scale-110 md:bottom-8 md:right-8 md:h-16"
         aria-label="Contactar por WhatsApp"
+        onClick={() => {
+          trackMetaPixelEvent('Lead', {
+            content_name: 'Floating WhatsApp Button',
+            source: 'landing_luxury_house',
+            position: 'floating_button'
+          });
+        }}
       >
         <Image src="/assets/imgs/wp.png" alt="WhatsApp" width={30} height={30} className="md:w-12 md:h-12" />
         <p className="font-bold">{t.whatsapp}</p>
