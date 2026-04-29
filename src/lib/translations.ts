@@ -136,14 +136,25 @@ export const translations = {
     whatsapp: "Cotizar",
     // SEO
     seo: {
-      title: "Remodelación de calidad en Colombia | Diseño interior funcional",
-      description: "Transformamos casas y apartamentos en espacios hermosos y funcionales con diseño interior, acabados de calidad, iluminación arquitectónica y ejecución profesional.",
+      title: "Remodelación de interiores con calidad y lujo",
+      description: "Empresa de remodelación de interiores ubicada en Santa Marta, Barranquilla y Valledupar. Creamos espacios funcionales, elegantes y memorables para propietarios que buscan acabados de calidad, construcción organizada y trabajo impecable.",
       keywords: [
-        "remodelación de calidad",
-        "diseño interior funcional",
+        "remodelación de interiores en Santa Marta",
+        "remodelación de interiores en Barranquilla",
+        "remodelación de interiores en Valledupar",
+        "diseños de interiores de lujo",
         "remodelación de cocinas",
+        "remodelación de baños",
+        "remodelación de exteriores",
         "acabados de calidad",
         "remodelación de casas",
+        "remodelación de apartamentos",
+        "remodelación de oficinas",
+        "remodelación de locales comerciales",
+        "remodelación de hoteles",
+        "remodelación de restaurantes",
+        "remodelación de bares",
+        "remodelación de discotecas",
         "interiorismo Colombia",
       ]
     }
@@ -283,14 +294,25 @@ export const translations = {
     whatsapp: "Quote with us",
     // SEO
     seo: {
-      title: "Quality Remodeling in Colombia | Functional Interior Design",
-      description: "We transform houses and apartments into beautiful and functional spaces with interior design, quality finishes, architectural lighting, and professional execution.",
+      title: "Interior remodeling with quality and luxury",
+      description: "Interior remodeling company located in Santa Marta, Barranquilla, and Valledupar. We create functional, elegant, and memorable spaces for property owners seeking high-quality finishes, organized construction, and flawless execution.",
       keywords: [
-        "quality remodeling",
-        "functional interior design",
+        "interior remodeling in Santa Marta",
+        "interior remodeling in Barranquilla",
+        "interior remodeling in Valledupar",
+        "luxury interior design",
         "kitchen remodeling",
-        "quality finishes",
-        "house remodeling",
+        "bathroom remodeling",
+        "exterior remodeling",
+        "high-quality finishes",
+        "home remodeling",
+        "apartment remodeling",
+        "office remodeling",
+        "commercial space remodeling",
+        "hotel remodeling",
+        "restaurant remodeling",
+        "bar remodeling",
+        "nightclub remodeling",
         "interior design Colombia",
       ]
     }

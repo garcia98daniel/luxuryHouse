@@ -21,6 +21,9 @@ export default function LuxuryRemodelingFunnel() {
   };
   return (
     <main className="min-h-screen bg-[#090806] text-[#f7efe3] selection:bg-[#c6a15b] selection:text-black">
+      <h1 className="sr-only">
+        Remodelación de lujo en Santa Marta, Barranquilla y Valledupar
+      </h1>
       <div className="fixed top-4 right-4 z-40 md:top-6 md:right-6">
         <div 
           className="relative group cursor-pointer transition-all duration-300 hover:scale-110"
