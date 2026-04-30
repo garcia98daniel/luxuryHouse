@@ -136,27 +136,22 @@ export const translations = {
     whatsapp: "Cotizar",
     // SEO
     seo: {
-      title: "Remodelación de interiores con calidad y lujo",
-      description: "Empresa de remodelación de interiores ubicada en Santa Marta, Barranquilla y Valledupar. Creamos espacios funcionales, elegantes y memorables para propietarios que buscan acabados de calidad, construcción organizada y trabajo impecable.",
+      title:
+        "Remodelación de interiores en Santa Marta, Barranquilla y Valledupar",
+
+      description:
+        "Remodelar apartamentos en Santa Marta, Barranquilla y Valledupar. Diseño de cocinas integral, carpinteria, baños, closets, salas, comedores y habitaciones con atencion al detalle.",
+
       keywords: [
-        "remodelación de interiores en Santa Marta",
-        "remodelación de interiores en Barranquilla",
-        "remodelación de interiores en Valledupar",
-        "diseños de interiores de lujo",
-        "remodelación de cocinas",
-        "remodelación de baños",
-        "remodelación de exteriores",
-        "acabados de calidad",
-        "remodelación de casas",
+        "remodelación de lujo Santa Marta",
+        "remodelación Barranquilla",
+        "remodelación Valledupar",
+        "diseño interior Santa Marta",
+        "diseño interior Barranquilla",
+        "diseño interior Valledupar",
         "remodelación de apartamentos",
-        "remodelación de oficinas",
-        "remodelación de locales comerciales",
-        "remodelación de hoteles",
-        "remodelación de restaurantes",
-        "remodelación de bares",
-        "remodelación de discotecas",
-        "interiorismo Colombia",
-      ]
+        "acabados de lujo Colombia",
+      ],
     }
   },
   en: {
@@ -294,27 +289,22 @@ export const translations = {
     whatsapp: "Quote with us",
     // SEO
     seo: {
-      title: "Interior remodeling with quality and luxury",
-      description: "Interior remodeling company located in Santa Marta, Barranquilla, and Valledupar. We create functional, elegant, and memorable spaces for property owners seeking high-quality finishes, organized construction, and flawless execution.",
+      title:
+        "Interior Remodeling in Santa Marta, Barranquilla and Valledupar",
+
+      description:
+        "Apartment remodeling services in Santa Marta, Barranquilla and Valledupar. Kitchen design, custom carpentry, bathrooms, closets, living rooms, dining areas and bedrooms with attention to detail.",
+
       keywords: [
-        "interior remodeling in Santa Marta",
-        "interior remodeling in Barranquilla",
-        "interior remodeling in Valledupar",
-        "luxury interior design",
-        "kitchen remodeling",
-        "bathroom remodeling",
-        "exterior remodeling",
-        "high-quality finishes",
-        "home remodeling",
+        "luxury remodeling Santa Marta",
+        "remodeling Barranquilla",
+        "remodeling Valledupar",
+        "interior design Santa Marta",
+        "interior design Barranquilla",
+        "interior design Valledupar",
         "apartment remodeling",
-        "office remodeling",
-        "commercial space remodeling",
-        "hotel remodeling",
-        "restaurant remodeling",
-        "bar remodeling",
-        "nightclub remodeling",
-        "interior design Colombia",
-      ]
+        "luxury finishes Colombia",
+      ],
     }
   }
 };

@@ -14,32 +14,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { translations } from "@/lib/translations";
+
 export const metadata: Metadata = {
-  icons: {
-    icon: "/assets/imgs/logo.png",
-  },
-  title:
-    "Remodelación de lujo en Santa Marta y Barranquilla | Diseño interior premium en Valledupar",
-
-  description:
-    "Especialistas en remodelación de lujo en Santa Marta, Barranquilla y Valledupar. Diseñamos y transformamos casas y apartamentos con acabados premium para aumentar el valor de tu propiedad.",
-
-  keywords: [
-    "remodelación de lujo Santa Marta",
-    "remodelación Barranquilla",
-    "remodelación Valledupar",
-    "diseño interior Santa Marta",
-    "diseño interior Barranquilla",
-    "diseño interior Valledupar",
-    "remodelación de apartamentos",
-    "acabados de lujo Colombia",
-  ],
-
+  title: translations.es.seo.title,
+  description: translations.es.seo.description,
+  keywords: translations.es.seo.keywords,
   openGraph: {
-    title:
-      "Remodelación de lujo en Santa Marta, Barranquilla y Valledupar",
-    description:
-      "Transformamos espacios en experiencias premium con diseño interior y acabados de alto nivel en la costa Caribe.",
+    title: translations.es.seo.title,
+    description: translations.es.seo.description,
     url: "https://luxuryhousecol.com",
     siteName: "Luxury House Colombia",
     locale: "es_CO",
